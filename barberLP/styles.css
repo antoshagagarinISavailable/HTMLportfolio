@@ -26,7 +26,6 @@ ul {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
-  padding: 4vh 0;
 }
 
 li {
@@ -67,13 +66,14 @@ button {
 }
 
 .contentWrapper {
+  height: 100vh;
+
   display: grid;
   grid-template-columns: 1fr 2fr 3fr;
   gap: 6vw;
 }
 
 .block1 {
-  padding-bottom: 4vh;
   display: grid;
   justify-items: center;
   align-content: space-around;
@@ -107,10 +107,8 @@ button {
   font-size: 3vw;
 }
 .block2 {
-  padding-bottom: 4vh;
-
   display: grid;
-  grid-template-rows: max-content max-content;
+  grid-template-rows: max-content 1fr;
   justify-content: end;
   align-content: space-between;
 }
@@ -153,7 +151,6 @@ button {
 }
 
 .block3 {
-  padding-bottom: 4vh;
   margin-right: 8vw;
 
   display: grid;
