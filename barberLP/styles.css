@@ -57,7 +57,7 @@ button {
   user-select: none;
 
   scroll-behavior: smooth;
-  transition: all 1s ease;
+  transition: all 200ms ease;
 }
 
 .section {
@@ -245,4 +245,11 @@ button {
   stroke-width: 5;
 
   z-index: -1;
+}
+
+.svgHome {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  scale: 2;
 }
