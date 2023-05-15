@@ -345,11 +345,3 @@ footer p {
   grid-template-columns: max-content max-content;
   justify-content: space-between;
 }
-
-.svgHome {
-  position: sticky;
-  top: 2.5em;
-  left: 1.5em;
-  scale: 2;
-  fill: #426b1f;
-}

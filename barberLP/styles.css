@@ -246,10 +246,3 @@ button {
 
   z-index: -1;
 }
-
-.svgHome {
-  position: absolute;
-  top: 1em;
-  left: 1em;
-  scale: 2;
-}

@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
     <link rel="stylesheet" href="styles.css" />
     <title>Portfolio</title>
   </head>
@@ -13,7 +17,25 @@
       <p>Буду заливать сюда свёрстанные веб сайты</p>
       <div class="links">
         <div class="links__item">
-          <a href="/barberLP/index.html">BarberLP</a>
+          <span>
+            <a
+              href="https://antoshagagarinisavailable.github.io/react/"
+              target="_blank"
+              >WorldPeas
+            </a>
+            mobile and desktop
+          </span>
+          <img
+            src="/img/reactAppScreen.png"
+            alt="React-app website screenshot"
+            width="300"
+          />
+        </div>
+        <div class="links__item">
+          <span>
+            <a href="/WorldPeas/index.html" target="_blank">WorldPeas </a>
+            desktop only
+          </span>
           <img
             src="/img/barberScreen.png"
             alt="barbershop website screenshot"
@@ -21,7 +43,11 @@
           />
         </div>
         <div class="links__item">
-          <a href="/WorldPeas/index.html">WorldPeas</a>
+          <span>
+            <a href="/WorldPeas/index.html" target="_blank">WorldPeas </a>
+            desktop only
+          </span>
+
           <img
             src="/img/WorldPeasScreen.png"
             alt="World Peas website screenshot"
@@ -30,5 +56,6 @@
         </div>
       </div>
     </div>
+    <script src="/index.js"></script>
   </body>
 </html>
