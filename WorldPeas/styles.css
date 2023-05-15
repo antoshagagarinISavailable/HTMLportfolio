@@ -1,0 +1,347 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+button,
+.item__price,
+.item__name {
+  white-space: nowrap;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.button {
+  display: inline-block;
+  background-color: #426b1f;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.75em 1em;
+
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: 600;
+}
+.logo {
+  font-family: serif;
+  font-size: 2em;
+  color: #426b1f;
+  letter-spacing: -1%;
+}
+body {
+  font-family: sans-serif;
+}
+h1 {
+  font-family: serif;
+  font-weight: 300;
+  font-size: 4em;
+  width: 1020px;
+  text-align: center;
+  letter-spacing: -2px;
+  line-height: 120%;
+}
+h1 span {
+  font-style: italic;
+}
+button {
+  background-color: #426b1f;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.75em 1em;
+
+  cursor: pointer;
+}
+
+.container {
+  width: 80vw;
+  margin: 2em auto;
+  display: grid;
+  gap: 6em;
+}
+
+header {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: max-content 70%;
+  gap: 4em;
+  align-items: start;
+}
+
+.navList {
+  display: grid;
+  gap: 2em;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.upperPart {
+  margin-bottom: 6em;
+
+  display: grid;
+  justify-self: center;
+  justify-items: center;
+  gap: 2em;
+}
+
+.imgsContanier {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+}
+.figcaption {
+  margin-top: 1em;
+  width: 80%;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 2em;
+}
+
+/* ------------------------------------------------------------------------ 
+    SHOP */
+.itemsHeader h1 {
+  width: max-content;
+  height: 1em;
+}
+.itemsHeader p {
+  font-weight: lighter;
+}
+.itemsHeader span {
+  font-weight: normal;
+}
+.itemsHeader__LeftSide {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2em;
+  align-items: end;
+}
+
+.itemsHeader {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 40px;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.itemsHeader__Nav {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2em;
+}
+.itemsHeader__Nav button {
+  border-radius: 2em;
+  border: 1px solid #c2c2c2;
+  background-color: transparent;
+  color: #333;
+  padding: 0.5em 1em;
+  transition: all 200ms ease;
+}
+.itemsHeader__Nav button:active,
+.itemsHeader__Nav button:hover {
+  border-radius: 2em;
+  background-color: #426b1f;
+  color: white;
+  padding: 0.5em 1em;
+
+  cursor: pointer;
+}
+
+.catalog {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+.catalog__item {
+  display: block;
+  background-color: #fafaf5;
+  border: 2px solid #e6e6e6;
+  border-radius: 24px;
+
+  max-height: 50vh;
+}
+.catalog__item img {
+  height: 75%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px 24px 0 0;
+}
+
+.item__name,
+.basketItem__total {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.item__price {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  line-height: 130%;
+
+  color: #426b1f;
+}
+
+.item__origin {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: #6d6d6d;
+}
+.itemInfoWrapper {
+  margin: 24px;
+
+  height: calc(25% - 48px);
+  display: grid;
+  align-content: space-evenly;
+  white-space: nowrap;
+}
+/* ------------------------------------------------------------------------ 
+    basket
+    
+    */
+
+.basket {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 31px;
+  align-items: start;
+}
+.basket__items {
+  display: grid;
+  gap: 31px;
+}
+.basketItem,
+.basket__total {
+  background-color: #fafaf5;
+
+  border: 2px solid #e6e6e6;
+
+  border-radius: 24px;
+
+  display: grid;
+}
+.basketItem {
+  display: grid;
+  grid-template-columns: 160px 1fr max-content;
+}
+.basketItem img {
+  height: 160px;
+
+  object-fit: cover;
+
+  border-radius: 24px 0 0 24px;
+}
+
+.basketItem__info,
+.basketItem__total {
+  margin: 24px;
+}
+
+.basket__total {
+  padding: 24px;
+}
+.basket__total .orderInfo {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.orderInfo__item {
+  margin: 16px 0;
+}
+.orderInfo__item__info {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+}

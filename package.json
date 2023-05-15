@@ -1,0 +1,8 @@
+{
+  "name": "HTMLportfolio",
+  "version": "1.0.0",
+  "description": "all the web pages",
+  "main": "index.js",
+  "author": "tony",
+  "license": "MIT"
+}
